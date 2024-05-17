@@ -1,0 +1,51 @@
+html{
+    height:100%
+ 
+}
+
+header{
+    background-color: rgb(134, 162, 205);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+body{
+    background-color: rgb(134, 162, 205);
+}
+
+footer{
+    color: antiquewhite;
+}
+
+
+#green{
+    background-color: lightseagreen;
+}
+
+#yellow{
+    background-color: khaki;
+}
+
+#blue{
+    background-color:steelblue;
+}
+
+#orange{
+    background-color: salmon;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0px;
+    border: none;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
