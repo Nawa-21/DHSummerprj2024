@@ -1,21 +1,33 @@
 html{
     height:100%
- 
 }
 
 header{
+    background-color: rgb(36, 45, 58);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+}
+
+body {
     background-color: rgb(134, 162, 205);
     display: flex;
     justify-content: center;
-    width: 100%;
-}
-
-body{
-    background-color: rgb(134, 162, 205);
+    align-items: center;
+    padding-top: 100px;
 }
 
 footer{
+    background-color: rgb(36, 45, 58);
+    display: flex;
+    justify-content: center;
+    position: fixed;
     color: antiquewhite;
+    bottom: 0;
+    width: 100%;
 }
 
 
@@ -31,14 +43,26 @@ footer{
     background-color:steelblue;
 }
 
+#blue:hover{
+    background-color:antiquewhite;
+}
+#yellow:hover{
+    background-color:antiquewhite;
+}
+#green:hover{
+    background-color:antiquewhite;
+}
+#orange:hover{
+    background-color:antiquewhite;
+}
+
 #orange{
     background-color: salmon;
 }
 
 .button {
     display: inline-block;
-    padding: 10px 20px;
-    margin: 5px;
+    padding: 2rem 100px;
     color: white;
     text-align: center;
     text-decoration: none;
@@ -48,4 +72,15 @@ footer{
 
 .button:hover {
     background-color: #0056b3;
+}
+
+.container{
+    padding-top: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.box{
+    padding: 5rem;
 }
