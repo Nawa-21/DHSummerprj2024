@@ -115,6 +115,7 @@ footer{
     justify-content: center;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: small;
+    max-width: 600px;
 }
 
 .story{
