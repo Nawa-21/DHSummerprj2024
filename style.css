@@ -1,33 +1,50 @@
 html{
-    height:100%
+    box-sizing:border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 header{
-    background-color: rgb(36, 45, 58);
-    display: flex;
+    background-color: black;
     justify-content: center;
+    display: flex;
+    align-items: center;
     position: fixed;
-    width: 100%;
     top: 0;
-
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1;
 }
 
 body {
-    background-color: rgb(134, 162, 205);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
+    background-color: black;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+
 }
 
 footer{
-    background-color: rgb(36, 45, 58);
+    background-color: black;
     display: flex;
     justify-content: center;
     position: fixed;
     color: antiquewhite;
     bottom: 0;
     width: 100%;
+    max-width: 700px;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
 }
 
 
@@ -43,26 +60,42 @@ footer{
     background-color:steelblue;
 }
 
-#blue:hover{
-    background-color:antiquewhite;
-}
-#yellow:hover{
-    background-color:antiquewhite;
-}
-#green:hover{
-    background-color:antiquewhite;
-}
-#orange:hover{
-    background-color:antiquewhite;
-}
-
 #orange{
     background-color: salmon;
 }
 
+#black{
+    background-color: black;
+}
+
+#pink{
+    background-color: pink;
+}
+
+#blue:hover, #yellow:hover, #green:hover, #orange:hover, #pink:hover {
+    background-color: antiquewhite;
+}
+  /* .text-glow {
+    text-align: center;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 5px #ffffffc3, 0 0 10px #ffffffc3, 0 0 15px #e60073c3, 0 0 20px #e60073c3, 0 0 25px #e60073c3, 0 0 30px #e60073c3, 0 0 35px #e60073c3;
+    }
+    to {
+      text-shadow: 0 0 10px #ffffffc3, 0 0 15px #ff4da6c3, 0 0 20px #ff4da6c3, 0 0 25px #ff4da6c3, 0 0 30px #ff4da6c3, 0 0 35px #ff4da6c3, 0 0 40px #ff4da6c3;
+    }
+  } */
+
+
 .button {
     display: inline-block;
-    padding: 2rem 100px;
+    margin: auto;
+    padding: 20px;
     color: white;
     text-align: center;
     text-decoration: none;
@@ -71,16 +104,228 @@ footer{
 }
 
 .button:hover {
-    background-color: #0056b3;
+    font-weight: 400;
+    text-shadow: 0 0 5px #ffffffc3
+}
+
+.story-col{
+    display:flexbox;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+}
+
+.story{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.story img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%; /* Ensure the image does not exceed the container size */
+    max-height: 100%; /* Ensure the image does not exceed the container size */
+    object-fit: cover; /* Ensures the image covers the entire container */
+    border-radius: 50%; /* Applies the border-radius to the image itself */
+}
+
+.overlay {
+    width: 5.8rem;
+    height: 5.8rem;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute; /* Position it absolutely within the .story container */
+    top: 50%; /* Center it vertically */
+    left: 50%; /* Center it horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to truly center it */
+    padding: 6px;
+}
+
+.ratio-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    margin: 0 auto; /* Center the wrapper horizontally */
+}
+
+.profile{
+    justify-self: center;
+    background-color: black;
+    display: grid;
+    width: 100%;
+    max-height: 400px;
+    max-width: 700px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.item{
+    grid-column: span 2;
+    grid-row: span 2;
+    border-radius: 50%;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    padding: 10px;
+    transition: padding 0.3s ease;
+}
+
+.item img:hover {
+    padding: 2px;
+}
+
+
+.item2{
+    grid-column: 1/3;
+    grid-row: 3;
+    color: white;
+    font-size: medium;
+    padding-top: 10px;
+    top: 0;
+    justify-self: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.item3{
+    grid-column: 3/8;
+    grid-row: 1/4;
+    color: white;
+    font-size: small;
+    padding-top: 25px;
+    margin: 0 0 10px 10px;
+    border-radius: 9px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.storybar{
+    grid-column: 1/9;
+    grid-row: 4;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    color: white;
 }
 
 .container{
-    padding-top: 10px;
+    background-color: black;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: 4px;
+    width: 100%;
+    height:max-content;
+    padding-bottom: 100px;
 }
 
 .box{
-    padding: 5rem;
+    position: relative;
+    padding-top: 100%;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 767px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: black;
+        grid-auto-rows: auto;
+        width:100%;
+        padding:0;
+        height: max-content;
+        gap: 4px;
+        padding-bottom: 100px;
+    }
+
+    .button {
+        padding: 1rem 20px; /* Further adjust button padding for small screens */
+    }
+    
+    .box {
+        padding: 50%;/* Further adjust box padding for small screens */
+        box-shadow: 0 -2px 4px rgba(0,0,0,0.1)
+    }
+
+    .profile{
+        justify-self: center;
+        background-color: black;
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .item{
+        grid-column: span 2;
+        grid-row: span 2;
+        border-radius: 50%;
+    }
+    .item2{
+        grid-column: 1/3;
+        grid-row: 3;
+        color: white;
+        font-size: medium;
+        padding-top: 10px;
+        top: 0;
+        justify-self: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .item3{
+        grid-column: 3/8;
+        grid-row: 1/4;
+        color: white;
+        font-size: small;
+        padding-top: 25px;
+        margin: 0 0 10px 10px;
+        border-radius: 9px;
+    }
+
+    .storybar{
+        grid-column: 1/9;
+        grid-row: 4;
+        justify-content: space-evenly;
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+
+
+    @media (max-width: 680px) {
+        .item3{
+            grid-column: 3/8;
+            grid-row: 1/4;
+            color: white;
+            font-size: small;
+            margin: 0 0 10px 10px;
+            border-radius: 9px;
+            padding-top: 25px;
+        }
+
+        .item2{
+            font-size: small;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-top: 4px;
+        }
+    
+    }
 }
