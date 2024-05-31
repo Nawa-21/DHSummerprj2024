@@ -274,7 +274,7 @@ footer{
         grid-row: 4;
         justify-content: space-evenly;
         display: flex;
-        align-items: center;
+        justify-items: left;
         color: white;
         left: 0;
         top: 0;
